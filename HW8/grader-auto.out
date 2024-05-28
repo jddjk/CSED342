@@ -1,0 +1,83 @@
+extraCredit: 0
+fatalError: false
+maxExtraCredit: 0
+maxTotalPoints: 0
+messages: []
+mode: auto
+parts:
+- description: Test formula 1a implementation
+  extraCredit: false
+  maxPoints: 2
+  maxSeconds: 5
+  messages:
+  - 'Exception thrown: <class ''FileNotFoundError''> -- [Errno 2] No such file or
+    directory: ''models\\1a.pklz'''
+  - "  File \"C:\\Users\\user\\OneDrive\\Desktop\\HW8\\release\\grader.py\", line\
+    \ 41, in <lambda>\n    grader.addHiddenPart('1a-1-hidden', lambda : checkFormula('1a',\
+    \ submission.formula1a()), 2, description='Test formula 1a implementation')\n"
+  - "  File \"C:\\Users\\user\\OneDrive\\Desktop\\HW8\\release\\grader.py\", line\
+    \ 24, in checkFormula\n    targetModels = pickle.load(open(filename, 'rb'))\n"
+  name: 1a-1-hidden
+  points: 0
+  seconds: 0
+- description: Test formula 1b implementation
+  extraCredit: false
+  maxPoints: 2
+  maxSeconds: 5
+  messages:
+  - 'Exception thrown: <class ''FileNotFoundError''> -- [Errno 2] No such file or
+    directory: ''models\\1b.pklz'''
+  - "  File \"C:\\Users\\user\\OneDrive\\Desktop\\HW8\\release\\grader.py\", line\
+    \ 42, in <lambda>\n    grader.addHiddenPart('1b-1-hidden', lambda : checkFormula('1b',\
+    \ submission.formula1b()), 2, description='Test formula 1b implementation')\n"
+  - "  File \"C:\\Users\\user\\OneDrive\\Desktop\\HW8\\release\\grader.py\", line\
+    \ 24, in checkFormula\n    targetModels = pickle.load(open(filename, 'rb'))\n"
+  name: 1b-1-hidden
+  points: 0
+  seconds: 0
+- description: Test formula 1c implementation
+  extraCredit: false
+  maxPoints: 2
+  maxSeconds: 5
+  messages:
+  - 'Exception thrown: <class ''FileNotFoundError''> -- [Errno 2] No such file or
+    directory: ''models\\1c.pklz'''
+  - "  File \"C:\\Users\\user\\OneDrive\\Desktop\\HW8\\release\\grader.py\", line\
+    \ 43, in <lambda>\n    grader.addHiddenPart('1c-1-hidden', lambda : checkFormula('1c',\
+    \ submission.formula1c()), 2, description='Test formula 1c implementation')\n"
+  - "  File \"C:\\Users\\user\\OneDrive\\Desktop\\HW8\\release\\grader.py\", line\
+    \ 24, in checkFormula\n    targetModels = pickle.load(open(filename, 'rb'))\n"
+  name: 1c-1-hidden
+  points: 0
+  seconds: 0
+- description: Test formula 1d implementation
+  extraCredit: false
+  maxPoints: 2
+  maxSeconds: 5
+  messages:
+  - 'Exception thrown: <class ''FileNotFoundError''> -- [Errno 2] No such file or
+    directory: ''models\\1d.pklz'''
+  - "  File \"C:\\Users\\user\\OneDrive\\Desktop\\HW8\\release\\grader.py\", line\
+    \ 44, in <lambda>\n    grader.addHiddenPart('1d-1-hidden', lambda : checkFormula('1d',\
+    \ submission.formula1d()), 2, description='Test formula 1d implementation')\n"
+  - "  File \"C:\\Users\\user\\OneDrive\\Desktop\\HW8\\release\\grader.py\", line\
+    \ 24, in checkFormula\n    targetModels = pickle.load(open(filename, 'rb'))\n"
+  name: 1d-1-hidden
+  points: 0
+  seconds: 0
+- description: Test formula 1e implementation
+  extraCredit: false
+  maxPoints: 3
+  maxSeconds: 5
+  messages:
+  - 'Exception thrown: <class ''FileNotFoundError''> -- [Errno 2] No such file or
+    directory: ''models\\1e.pklz'''
+  - "  File \"C:\\Users\\user\\OneDrive\\Desktop\\HW8\\release\\grader.py\", line\
+    \ 45, in <lambda>\n    grader.addHiddenPart('1e-1-hidden', lambda : checkFormula('1e',\
+    \ submission.formula1e()), 3, description='Test formula 1e implementation')\n"
+  - "  File \"C:\\Users\\user\\OneDrive\\Desktop\\HW8\\release\\grader.py\", line\
+    \ 24, in checkFormula\n    targetModels = pickle.load(open(filename, 'rb'))\n"
+  name: 1e-1-hidden
+  points: 0
+  seconds: 0
+totalPoints: 0
