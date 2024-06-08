@@ -7,8 +7,8 @@
 {\Large CSED342 Assignment 8 \vspace{10pt}}
 
 \begin{tabular}{rl}
-Student ID: & 00000000 \\
-Name: & GilDong Hong \\
+Student ID: & 20220036 \\
+Name: & Jaehyeon Lee \\
 \end{tabular}
 \end{center}
 
@@ -18,10 +18,94 @@ By turning in this assignment, I agree by the POSTECH honor code and declare tha
 
 \section*{Problem 2a}
 
-\verb|write your answer|
+\subsection*{Knowledge Base in CNF}
+First, we convert each formula in the knowledge base \( KB = \{(A \lor B) \rightarrow \neg C, \neg(\neg A \lor C) \rightarrow D, A\} \) into CNF.
+
+\begin{enumerate}
+    \item Convert \((A \lor B) \rightarrow \neg C\):
+    \[
+    (A \lor B) \rightarrow \neg C \equiv \neg (A \lor B) \lor \neg C.
+    \]
+    Using De Morgan's laws:
+    \[
+    \neg (A \lor B) \equiv \neg A \land \neg B.
+    \]
+    Thus:
+    \[
+    \neg (A \lor B) \lor \neg C \equiv (\neg A \land \neg B) \lor \neg C \equiv (\neg A \lor \neg C) \land (\neg B \lor \neg C).
+    \]
+    \item Convert \(\neg(\neg A \lor C) \rightarrow D\):
+    \[
+    \neg(\neg A \lor C) \rightarrow D \equiv \neg \neg(\neg A \lor C) \lor D \equiv (\neg A \lor C) \lor D \equiv \neg A \lor C \lor D
+    \]
+    \item The formula \(A\) is already in CNF.
+\end{enumerate}
+
+Thus, the CNF form of the knowledge base is:
+\[
+KB = \{\neg A \lor \neg C, \neg B \lor \neg C, \neg A \lor C \lor D, A\}.
+\]
+
+\subsection*{Derivation using Modus Ponens}
+Now, we use Modus Ponens to derive \(D\).
+
+\begin{enumerate}
+    \item From \(A\), apply to \(\neg A \lor \neg C\):
+    \[
+    \frac{A, \neg A \lor \neg C}{\neg C} \quad \text{(Modus Ponens)}
+    \]
+    \item From \(\neg C\), apply to \(\neg A \lor C \lor D\):
+    \[
+    \frac{\neg C, C \lor \neg A \lor D}{\neg A \lor D} \quad \text{(Modus Ponens)}
+    \]
+    \item From \(A\), apply to \(\neg A \lor D\):
+    \[
+    \frac{A, \neg A \lor D}{D} \quad \text{(Modus Ponens)}
+    \]
+\end{enumerate}
+
+Thus, we derive \(D\).
 
 \section*{Problem 2b}
 
-\verb|write your answer|
+\subsection*{Knowledge Base in CNF}
+Convert the knowledge base \(KB = \{A \lor B, B \rightarrow C, (A \lor C) \rightarrow D\}\) into CNF.
+
+\begin{enumerate}
+    \item The formula \(A \lor B\) is already in CNF.
+    \item Convert \(B \rightarrow C\):
+    \[
+    B \rightarrow C \equiv \neg B \lor C.
+    \]
+    \item Convert \((A \lor C) \rightarrow D\):
+    \[
+    (A \lor C) \rightarrow D \equiv \neg (A \lor C) \lor D \equiv (\neg A \land \neg C) \lor D \equiv (\neg A \lor D) \land (\neg C \lor D).
+    \]
+\end{enumerate}
+
+Thus, the CNF of the knowledge base is:
+\[
+KB = \{A \lor B, \neg B \lor C, \neg A \lor D, \neg C \lor D\}.
+\]
+
+\subsection*{Derivation using the Resolution Rule}
+We use the resolution rule to derive \(D\).
+
+\begin{enumerate}
+    \item Resolve \(A \lor B\) and \(\neg B \lor C\):
+    \[
+    \frac{A \lor B, \neg B \lor C}{A \lor C} \quad \text{(Resolution)}
+    \]
+    \item Resolve \(A \lor C\) and \(\neg A \lor D\):
+    \[
+    \frac{C \lor A, \neg A \lor D}{C \lor D} \quad \text{(Resolution)}
+    \]
+    \item Resolve \(C \lor D\) and \(\neg C \lor D\):
+    \[
+    \frac{D \lor C, \neg C \lor D}{D} \quad \text{(Resolution)}
+    \]
+\end{enumerate}
+
+Thus, we derive \(D\).
 
 \end{document}

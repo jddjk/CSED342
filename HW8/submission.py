@@ -32,7 +32,7 @@ def formula1c():
     Day = Atom('Day')     # whether it's day
     Night = Atom('Night') # whether it's night
     # BEGIN_YOUR_CODE (our solution is 1 line of code, but don't worry if you deviate from this)
-    return Or(And(Day, Not(Night)), And(Not(Day), Night))
+    return Or(And(Day, Not(Night)), And(Night, Not(Day)))
     # END_YOUR_CODE
 
 # Sentence: "One can access campus server only if she (or he) is a computer science major or not a freshman."
