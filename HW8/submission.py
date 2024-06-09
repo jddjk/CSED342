@@ -51,5 +51,5 @@ def formula1e():
     StudentNum = 10
     def PassAI(i): return Atom('PassAI' + str(i)) # whether student i pass AI course
     # BEGIN_YOUR_CODE (our solution is 1 line of code, but don't worry if you deviate from this)
-    return AndList([PassAI(i) for i in range(StudentNum)])
+    return AndList([PassAI(i) for i in range(StudentNum+1)])
     # END_YOUR_CODE
